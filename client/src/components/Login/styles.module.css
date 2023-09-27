@@ -1,0 +1,149 @@
+.login_container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F3F4F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login_form_container {
+    width: 100%;
+    max-width: 900px;
+    height: auto; /* Adjust height to auto */
+    display: flex;
+    flex-direction: column; /* Stack on top for mobile */
+    border-radius: 10px;
+    box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+                0px 3px 4px 0px rgb(0 0 0 / 14%), 
+                0px 1px 8px 0px rgb(0 0 0 / 12%);
+}
+
+.left, .right {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    background-color: #F3F4F6;
+    border-radius: 10px 10px 0 0; /* Adjusted border radius */
+}
+
+.form_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_container h1 {
+    font-size: 32px; /* Slightly smaller font size for mobile */
+    margin-top: 0;
+    color: #1B2D45;
+}
+
+.input, .error_msg, .inputGroup {
+    width: 100%;
+    max-width: 370px;
+}
+
+.inputGroup > *:first-child {
+    margin-right: 10px;
+}
+
+.inputGroup {
+    display: flex;
+    align-items: center;
+    background-color: #E7EEF3;
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+.error_msg {
+    transform: translateY(-20px); /* This hides the message slightly above its normal position */
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    padding: 15px;
+    margin: 5px 0;
+    font-size: 14px;
+    background-color: #E85151;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.error_msg.active {
+    transform: translateY(0); /* Reset the position */
+    opacity: 1;
+}
+
+.right {
+    background: linear-gradient(160deg, #1F5692, #220505);
+    border-radius: 0 0 10px 10px; /* Adjusted border radius */
+}
+
+.right h1 {
+    font-size: 32px; /* Slightly smaller font size for mobile */
+    margin-top: 0;
+    color: #F7FBFD;
+}
+
+.white_btn, .green_btn {
+    border: none;
+    outline: none;
+    padding: 10px 0; /* Slightly smaller padding for mobile */
+    background-color: rgb(15, 146, 58);
+    border-radius: 20px;
+    width: 160px; /* Slightly smaller width for mobile */
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.green_btn {
+    background: linear-gradient(160deg, #1F5692, #1F5692);
+    color: #F7FBFD;
+    margin: 10px;
+}
+
+.green_btn:hover, .white_btn:hover {
+    filter: brightness(90%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 768px) { /* Tablet and up */
+    .login_form_container {
+        flex-direction: row; /* Side-by-side for larger screens */
+        height: 500px;
+    }
+
+    .left {
+        flex: 2;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .right {
+        flex: 1;
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+@media screen and (min-width: 1024px) { /* Desktop and up */
+    .form_container h1, .right h1 {
+        font-size: 40px;
+    }
+
+    .input, .error_msg {
+        font-size: 16px;
+    }
+
+    .white_btn, .green_btn {
+        font-size: 16px;
+        padding: 15px 0;
+        width: 180px;
+    }
+}

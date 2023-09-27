@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+}
+
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  width: 100%;  /* Make sure the wrapper takes up the full width */
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;  /* Already at 100%, consider checking padding or margins */
+}
+.main_container {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;  /* Increased to 100% */
+}
+
+.header {
+  padding: 1.5em;
+  text-align: center;
+  margin-bottom: 2em;
+  color: #333;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.leftText {
+  color: #ffffff;
+  flex: 1;
+  padding: 20px;
+  font-size: 1.5em;
+  font-family: Arial, sans-serif;
+}
+
+
+.headerBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.surveyForm {
+  flex: 1;
+  background: rgba(242, 242, 242, 0.8);
+  padding: 1em;  /* Reduce the padding if needed */
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;  /* Increased width to 100% */
+  min-height: 80vh;  /* Existing height */
+  text-align: center;
+  font-size: 1em;
+  color: purple;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  /* Center align items */
+}
+
+
+.formGroup {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;  /* Already at full width */
+}
+/* Common width for both input and textarea */
+.formGroup input,
+.formGroup textarea {
+  width: 100%;  /* You can also set a fixed width like 300px if you prefer */
+}
+/* Common height for both input and textarea */
+.formGroup input,
+.formGroup textarea {
+  height: 40px;  /* Set the height */
+}
+
+/* Reset the height for textarea to make it auto */
+.formGroup textarea {
+  height: auto;
+  min-height: 40px;  /* Now set a minimum height */
+}
+label {
+  font-weight: 700;
+  display: block;
+  font-size: 1em;  /* Reduced font-size */
+  color: #333;
+}
+
+input,
+textarea {
+  margin-top: 0.5em;
+  font-size: 1.2em;
+  padding: 0.8em 1em;  /* Adjust this line */
+  width: 100%;  /* Already at full width */
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+textarea {
+  height: auto;
+  min-height: 150px;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px #719ECE;
+}
+
+input:hover,
+textarea:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #888;
+}
+
+.submitBtn {
+  background-color: #007bff;
+  color: white;
+  padding: 1em 1.8em;  /* Adjusted padding */
+  font-size: 1em;  /* Reduced font-size */
+  border-radius: 50px;
+  border: none;
+  margin-top: 1.5em;  /* Adjusted margin-top */
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submitBtn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.goBackBtn {
+  background-color: #007bff;  /* Same as the Submit button */
+  color: white;
+  padding: 1em 1.8em;
+  font-size: 1em;
+  border-radius: 50px;
+  border: none;
+  margin-top: 1.5em;
+  margin-right: auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-decoration: none;  /* Remove underline */
+}
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.goBackBtn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.requiredStar {
+  color: red;
+}
+
+
+@media (max-width: 1024px) {
+  /* Styles for tablets */
+  .main_container {
+    width: 90%;
+    padding-top: 40px;  /* Reduced top padding */
+  }
+
+  .leftText,
+  .surveyForm {
+    font-size: 1.2em;  /* Adjust font size */
+  }
+}
+
+@media (max-width: 768px) {
+
+  .main_container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 0px;  /* Further reduced top padding */
+    display: flex;
+    flex-direction: column;  /* Stack children vertically */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  /* Styles for mobile landscape and smaller tablets */
+  .contentWrapper {
+    flex-direction: column;  /* Stack the content vertically */
+  }
+  
+  .leftText, .surveyForm {
+    flex: 1 0 100%;  /* Take the full width */
+  }
+
+  .leftText,
+  .surveyForm {
+    font-size: 1em;  /* Adjust font size */
+  }
+  
+  .buttonContainer {
+    justify-content: center;  /* Center the buttons */
+  }
+
+  .goBackBtn {
+    margin-right: 15px; /* Give some space between the buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for mobile portrait */
+  .main_container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 0px;  /* Even more reduced top padding */
+    display: flex;
+    flex-direction: column;  /* Stack children vertically */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .leftText,
+  .surveyForm {
+    padding: 10px;
+    font-size: 0.8em;  /* Further reduce font size */
+    text-align: center;  /* Center text */
+    margin: 0 auto;  /* Center block */
+  }
+  
+  /* Reduce padding */
+  .formGroup input,
+  .formGroup textarea {
+    padding: 0.5em 1em;
+  }
+  
+  /* Reduce padding */
+  .submitBtn, .goBackBtn {
+    padding: 0.8em 1.4em;
+  }
+
+  /* Center buttons */
+  .buttonContainer {
+    justify-content: center;
+  }
+
+  /* Add some space between the buttons */
+  .goBackBtn {
+    margin-right: 15px;
+  }
+}

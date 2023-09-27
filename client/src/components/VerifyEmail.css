@@ -1,0 +1,35 @@
+.verify-email-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;  /* Full height */
+    background-color: #f4f4f4;  /* Light grey background */
+}
+
+.verify-email-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.verify-email-status {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.back-to-login {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;  /* Smooth color transition */
+}
+
+.back-to-login:hover {
+    background-color: #0056b3;
+}

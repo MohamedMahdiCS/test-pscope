@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Lato', sans-serif;
+    background-color: #ADD8E6; /* Light Blue */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards; /* increased duration for smoother effect */
+}
+
+.mainContent {
+    flex: 1 0 auto;
+       
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(20px); /* elements will move up slightly */
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); /* back to their original position */
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar {
+    z-index: 1001; 
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(160deg, #1F5692, #1F5692);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    animation-delay: 0.5s; /* delay the navbar animation */
+
+}
+
+.navbar h1 {
+    color: #FFFFFF;
+    font-size: 28px;
+    margin-left: 20px;
+    text-decoration: none;
+    
+}
+
+.someClassName {
+    text-decoration: none;
+    color: inherit;
+}
+
+.introContainer {
+    display: flex;
+    flex-direction: row-reverse;   /* Reverse the order */
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 0px;
+    margin-top: 10%;
+    justify-content: center;
+    animation-delay: 1s; /* delay the intro animation */
+
+}
+
+.introText {
+    font-size: 32px; /* Increased font size */
+    font-weight: 600; /* Bold font weight */
+    color: #FFFFFF; /* White color for contrast against the background */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for better readability */
+    text-align: center; /* Center align text */
+    line-height: 1.4; /* Improved line spacing */
+    padding: 30px; /* Added padding for a more balanced look */
+    background: rgba(0, 0, 0, 0.3); /* Slight black background for better readability */
+    border-radius: 10px; /* Rounded corners for a soft look */
+    margin-bottom: 30px; /* Spacing between the text and the button */
+}
+
+.introImage {
+    max-width: 600px;
+    width: 40%;
+    border-radius: 15px;
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.1),    /* Inner shadow */
+        0 10px 15px rgba(0, 0, 0, 0.15), /* Mid shadow */
+        0 20px 25px rgba(0, 0, 0, 0.2);  /* Outer shadow */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(105%) contrast(105%) saturate(110%); /* Increased brightness, contrast, and saturation */
+}
+
+.introImage:hover {
+    transform: scale(1.08) rotate(2deg);
+    filter: brightness(110%) contrast(110%) saturate(120%); /* More contrast and saturation on hover */
+}
+
+
+.button_container {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.white_btn, .white_btn2 {
+    padding: 8px 15px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    color: #FFFFFF;
+    background: none;
+}
+
+.white_btn:hover, .white_btn2:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);  /* Button grows slightly on hover */
+}
+
+.white_btn:active, .white_btn2:active {
+    transform: scale(0.95); /* Button shrinks slightly when clicked */
+}
+
+.feedbackContainer {
+    box-sizing: border-box;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Lighter background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    font-family: 'Lato', sans-serif; /* Use the Lato font */
+}
+
+.feedbackHeader {
+    font-family: 'Raleway', sans-serif; /* Use the Raleway font for headers */
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid #ADD8E6; /* Light Blue to match the theme */
+    margin-bottom: 20px;
+    padding-bottom: 10px; /* Added padding for balance */
+}
+
+.feedbackContainer h2, .feedbackContainer h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.feedbackSection {
+    margin: 10px 0;
+  }
+
+.feedbackSubtitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    margin-top: 20px; /* Added margin for spacing */
+}
+
+.feedbackText {
+    font-size: 16px;
+    line-height: 1.6; /* Improved line height */
+    color: #333;
+}
+  
+.feedbackList {
+    list-style: inside decimal;
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+
+.feedbackList li {
+    background-color: #f1f1f1; /* Light grey background for each list item */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px; /* Rounded corners */
+}
+
+.feedbackDescription {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: all 0.3s ease; /* Transition for hover effects */
+}
+
+.feedbackDescription:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Darker shadow on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.feedbackContainer p {
+    font-size: 18px;
+    line-height: 1.8; /* Increased line height for better readability */
+    margin-bottom: 25px; /* Increased spacing between feedbacks */
+    padding: 15px 25px; /* Increased padding */
+    background-color: #fff;
+    border-radius: 8px;
+    position: relative;
+    transition: transform 0.3s ease;
+    border-left: 4px solid #ADD8E6; /* Default border color */
+}
+
+.feedbackContainer p.positiveFeedback:before {
+    content: '🌟'; /* Using the star emoji for positive feedback */
+    color: #4CAF50;
+    font-size: 24px;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.feedbackContainer p.neutralFeedback:before {
+    content: '👍'; /* Using the thumbs up emoji for neutral feedback */
+    color: #FFA500;
+    font-size: 24px;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.feedbackContainer p.needsImprovement:before {
+    content: '📝'; /* Using the pencil emoji for areas of improvement */
+    color: #FF4500;
+    font-size: 24px;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.feedbackContainer p:hover {
+    transform: translateY(-5px); /* Move the card slightly up on hover */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+/* Positive feedback styles */
+.feedbackPositive {
+    border-left: 4px solid #4CAF50;  /* Green color for positive feedback */
+}
+
+/* Neutral feedback styles */
+.feedbackNeutral {
+    border-left: 4px solid #FFA500;  /* Orange color for neutral feedback */
+}
+
+/* Negative feedback styles */
+.feedbackNegative {
+    border-left: 4px solid #FF4500;  /* Red color for negative feedback */
+}
+
+.feedbackContainer p:before {
+    content: ""; /* Empty content by default */
+    position: absolute;
+    left: 20px; /* Positioning from the left */
+    top: 50%; /* Centering from the top */
+    transform: translateY(-50%); /* Perfect vertical centering */
+    width: 30px; /* Width of the icon */
+    height: 30px; /* Height of the icon */
+    background-size: cover; /* Cover the entire icon's area */
+}
+
+.feedbackContainer p.positiveFeedback {
+    border-left: 4px solid #4CAF50;  /* Green color for positive feedback */
+}
+
+.feedbackContainer p.neutralFeedback {
+    border-left: 4px solid #FFA500;  /* Orange color for neutral feedback */
+}
+.questionContainer {
+    max-width: 800px;
+    margin: 90px auto 20px;
+    padding: 0 15px;
+}
+
+
+.feedbackContainer {
+    margin: 90px auto 20px;
+    padding: 0 15px;
+}
+
+.feedbackContainer p:contains("👍") {
+    color: #4CAF50;  /* Green color for positive feedback */
+}
+
+.feedbackContainer p:contains("🤔") {
+    color: #FFA500;  /* Orange color for neutral feedback */
+}
+
+
+
+.startButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    position: relative;
+    animation-delay: 1.5s; /* delay the button animation */
+
+}
+
+.startButton {
+    background-color: #1F5692;
+    color: #FFFFFF;
+    padding: 15px 30px; /* Increased padding for a bigger button */
+    border: none;
+    border-radius: 7px; /* Slightly larger border radius */
+    font-size: 20px; /* Increased font size */
+    font-weight: 700; /* Bold font weight */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: flex; /* Flexbox to align the content */
+    align-items: center; /* Center align the text and the icon */
+    justify-content: center; /* Center the text and the icon */
+}
+
+
+.startButton:before {
+    content: '🚀'; /* Rocket emoji as an icon for starting the test */
+    margin-right: 10px; /* Space between the icon and the text */
+    font-size: 24px; /* Slightly larger icon for emphasis */
+}
+.startButton:hover {
+    background-color: #0F447A; /* Slightly darker shade on hover */
+    transform: translateY(-3px); /* Slight upward lift on hover */
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+}
+
+.startButton:active {
+    background-color: #0D3666; /* Even darker shade when clicked */
+    transform: translateY(1px); /* Slight downward press on active */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Less pronounced shadow when pressed */
+}
+
+
+/* Questions and Options */
+.questionContainer {
+    background-color: #fff;
+    background-image: linear-gradient(to bottom right, #ffffff, #f6f6f6);
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 140px auto 40px; /* Increased margin-top to account for the navbar height and some extra spacing */
+}
+
+.questionContainer h2 {
+    font-size: 26px; /* Adjusted font size */
+    color: #1F5692;
+    margin-bottom: 30px; /* Adjusted margin for better spacing */
+}
+
+.optionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  /* Increased gap for better spacing */
+}
+
+.optionItem {
+    display: flex;
+    align-items: center;
+    padding: 15px;   /* Increased padding */
+    background-color: #f5f5f5;
+    border-radius: 8px;  /* Increased border-radius */
+    transition: background-color 0.4s ease; /* Adjusted transition */
+    cursor: pointer;
+}
+
+.optionItem:hover {
+    background-color: #e4e4e4; /* Adjusted hover color */
+}
+
+.optionInput {
+    display: none; /* Hide the default radio button */
+}
+
+.optionLabel {
+    font-size: 20px;  /* Adjusted font size */
+    color: #444;     /* Adjusted color */
+    margin-left: 15px;   /* Adjusted margin */
+}
+
+.optionItem input[type="radio"]:checked + .optionLabel {
+    font-weight: bold;
+    color: #1F5692; /* Match the navbar color for consistency */
+}
+
+.navigationButtons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigationButtons button {
+    background-color: #340b94;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navigationButtons button:hover {
+    background-color: #2d0786;
+}
+
+.navigationButtons button:active {
+    background-color: #250663;
+    transform: translateY(2px); /* Slight move down to mimic a button press */
+}
+
+.footerLink {
+    color: #F66B1D;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;  /* Make the font bolder */
+}
+.footerLinks {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;  /* Add this line */
+}
+
+.footerLink:hover {
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.2);  /* Slight white background */
+    text-decoration: none;  /* No underline */
+}
+
+.copyrightText {
+    color: #ffffff;  /* You can change this color as needed */
+}
+.footer {
+    flex-shrink: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: linear-gradient(160deg, #1F5692, #1F5692);
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+@media (max-width: 768px) {
+    /* Navbar adjustments */
+    .navbar h1 {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+
+    /* Intro container adjustments */
+    .introContainer {
+        flex-direction: column;
+        margin-top: 20%;
+    }
+
+    .introText {
+        font-size: 15px;
+    }
+
+    .introImage {
+        max-width: 80%;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .questionContainer {
+        margin: 140px auto 40px; /* Increased margin-top to account for the navbar height and some extra spacing */
+        padding: 15px 20px;  /* Reduced padding */
+    }
+    .questionContainer h2 {
+        font-size: 22px;  /* Reduced font size */
+        margin-bottom: 20px;
+    }
+
+    .optionsContainer {
+        gap: 15px;  /* Reduced gap */
+    }
+    .optionItem {
+        padding: 10px;  /* Reduced padding */
+    }
+
+    .optionLabel {
+        font-size: 18px;  /* Reduced font size */
+        margin-left: 10px;  /* Reduced margin */
+    }
+  
+    .navigationButtons button {
+        padding: 8px 16px;  /* Reduced padding */
+        font-size: 14px;  /* Reduced font size */
+    }
+    /* Feedback container and book recommendations adjustments */
+    .feedbackContainer, .bookRecommendations, .questionContainer {
+        padding: 20px 10px;
+    }
+
+    .feedbackContainer h2, .feedbackContainer h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        padding-top: 15px;
+    }
+
+    .feedbackText {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .feedbackSubtitle {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .feedbackContainer p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        padding: 10px 15px;
+    }
+
+    .feedbackContainer p:before {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Button adjustments */
+    .white_btn, .white_btn2, .navigationButtons button {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .button_container {
+        justify-content: center;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+}
